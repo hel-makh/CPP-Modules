@@ -1,6 +1,9 @@
 NAME		=	Replace
 
-SRCS		=	main.cpp
+HEADERS		=	strReplace.hpp
+
+SRCS		=	main.cpp\
+				strReplace.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 
@@ -8,10 +11,10 @@ FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 RM			=	rm -f
 
-%.o:%.cpp
+%.o:%.cpp	$(HEADERS)
 			g++ $(FLAGS) -c $< -o $@
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(HEADERS)
 			g++ $(FLAGS) $(OBJS) -o $(NAME)
 
 all:		$(NAME)

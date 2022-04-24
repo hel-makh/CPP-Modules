@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 20:59:22 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/23 21:38:31 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:21:49 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class HumanA {
 		void		attack(void);
 	private:
 		std::string	name;
-		Weapon		*weapon;
+		Weapon&		weapon;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:37:30 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/24 17:11:11 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:29:21 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,6 @@ void	Harl::complain(std::string level) {
 		lvl ++;
 
 	switch (lvl) {
-		case 4:
-			this->notfound();
-			break ;
 		case 0:
 			this->debug();
 		case 1:
@@ -69,5 +66,8 @@ void	Harl::complain(std::string level) {
 			this->warning();
 		case 3:
 			this->error();
+			break ;
+		default:
+			this->notfound();
 	}
 }

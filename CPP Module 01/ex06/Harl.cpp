@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:37:30 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/24 17:29:21 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/04/24 17:30:36 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,12 @@ void	Harl::notfound(void) {
 }
 
 Harl::Harl(void) {
-	this->levels = new t_levels[5];
+	this->levels = new t_levels[4];
 
 	this->levels[0].level = "DEBUG";
 	this->levels[1].level = "INFO";
 	this->levels[2].level = "WARNING";
 	this->levels[3].level = "ERROR";
-	this->levels[4].level = "NOTFOUND";
 }
 
 Harl::~Harl(void) {

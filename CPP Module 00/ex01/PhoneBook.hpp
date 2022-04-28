@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 21:25:14 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/22 02:07:16 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/04/28 05:02:21 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <ctype.h>
 #include <limits>
 #include "Contact.hpp"
 

@@ -6,14 +6,14 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 22:18:16 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/22 03:10:45 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/04/28 05:02:47 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 static int	ft_stoi(std::string str) {
-	if (str.length() > 1 || str[0] < '0' || str[0] > '9')
+	if (str.length() > 1 || !isdigit(str[0]))
 		return (-1);
 	return (str[0] - '0');
 }
@@ -45,8 +45,10 @@ static void	displayContacts(PhoneBook phoneBook) {
 	int			contactIndex2;
 	int			i;
 
-	if (phoneBook.get_contactsSize() == 0)
+	if (phoneBook.get_contactsSize() == 0) {
+		std::cout << "PhoneBook is empty." << std::endl;
 		return ;
+	}
 	
 	printWidth("Index", 10);
 	std::cout << " | ";

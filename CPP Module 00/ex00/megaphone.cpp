@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 17:29:29 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/22 03:19:58 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/04/28 04:56:35 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	main(int argc, char **argv)
 			std::cout << (char)std::toupper(argv[i][j]);
 			j ++;
 		}
-		std::cout << " ";
 		i ++;
 	}
 	std::cout << std::endl;

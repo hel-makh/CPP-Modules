@@ -14,10 +14,10 @@ FLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -f
 
 %.o:%.cpp	$(HEADERS)
-			g++ $(FLAGS) -c $< -o $@
+			c++ $(FLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS) $(HEADERS)
-			g++ $(FLAGS) $(OBJS) -o $(NAME)
+			c++ $(FLAGS) $(OBJS) -o $(NAME)
 
 all:		$(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 18:52:04 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/07 20:29:24 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/07 23:33:24 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int	main(void) {
 	Point	Y(30.0f, 15.0f);
 
 	if (bsp(A, B, C, X))
-		std::cout << "+++ Point X is inside triangle ABC." << std::endl;
+		std::cout << "+++ Point X is inside triangle ABC." << std::endl << std::endl;
 	else
-		std::cout << "--- Point X is not inside triangle ABC." << std::endl;
+		std::cout << "--- Point X is not inside triangle ABC." << std::endl << std::endl;
 
 	if (bsp(A, B, C, Y))
-		std::cout << "+++ Point Y is inside triangle ABC." << std::endl;
+		std::cout << "+++ Point Y is inside triangle ABC." << std::endl << std::endl;
 	else
-		std::cout << "--- Point Y is not inside triangle ABC." << std::endl;
+		std::cout << "--- Point Y is not inside triangle ABC." << std::endl << std::endl;
 }

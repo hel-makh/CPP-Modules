@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:10:46 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/08 16:23:34 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/09 13:35:14 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ClapTrap::ClapTrap(void) :	_hitPoints(10),
 							_energyPoints(10),
 							_attackDamage(0) {
-	std::cout << "Default constructor called." << std::endl;
+	std::cout << "ClapTrap Default constructor called." << std::endl;
 	return ;
 }
 
@@ -25,25 +25,25 @@ ClapTrap::ClapTrap(std::string	name) :	_name(name),
 										_hitPoints(10),
 										_energyPoints(10),
 										_attackDamage(0) {
-	std::cout << "Name constructor called." << std::endl;
+	std::cout << "ClapTrap Name constructor called." << std::endl;
 	return ;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & rhs) {
-	std::cout << "Copy constructor called." << std::endl;
+	std::cout << "ClapTrap Copy constructor called." << std::endl;
 	*this = rhs;
 	return ;
 }
 
 ClapTrap::~ClapTrap(void) {
-	std::cout << "Destructor called." << std::endl;
+	std::cout << "ClapTrap Destructor called." << std::endl;
 	return ;
 }
 
 /****************************[ Operators overload ]****************************/
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs) {
-	std::cout << "Copy assignment operator called." << std::endl;
+	std::cout << "ClapTrap Copy assignment operator called." << std::endl;
 	this->setName(rhs.getName());
 	this->setHitPoints(rhs.getHitPoints());
 	this->setEnergyPoints(rhs.getEnergyPoints());

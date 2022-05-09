@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:54:10 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/09 16:21:04 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/09 17:34:33 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class DiamondTrap :	public ScavTrap,
 		std::string	getName(void) const;
 		void		setName(std::string name);
 		
+		void	attack(const std::string & target);
 		void	whoAmI(void);
 };
 

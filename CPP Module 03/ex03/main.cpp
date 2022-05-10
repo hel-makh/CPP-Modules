@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 16:02:42 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/09 17:58:59 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:37:05 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 static void	displayStatus(DiamondTrap &	ct) {
 	std::cout << "Name: " << ct.getName() << std::endl;
-	std::cout << "ClapTrap Name: " << ct.ClapTrap::getName() << std::endl;
 	std::cout << "HitPoints: " << ct.getHitPoints() << std::endl;
 	std::cout << "EnergyPoints: " << ct.getEnergyPoints() << std::endl;
 	std::cout << "AttackDamage: " << ct.getAttackDamage() << std::endl << std::endl;
@@ -41,6 +40,7 @@ int	main(void) {
 	clap1.whoAmI();
 
 	clap1.setName("claptrap1");
+	clap1.ClapTrap::setName("claptrap-1");
 
 	clap1.whoAmI();
 	

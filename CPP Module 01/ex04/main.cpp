@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 21:47:53 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/04/24 18:38:03 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/10 13:48:16 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int	main(int argc, char **argv) {
 	
 	std::string	str;
 	while (std::getline(in_file, str)) {
-		strReplace(str, argv[2], argv[3]);
+		while (strReplace(str, argv[2], argv[3]))
+			;
 		out_file << str;
 		if (!in_file.eof())
 			out_file << std::endl;

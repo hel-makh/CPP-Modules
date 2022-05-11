@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:39:02 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/11 11:42:18 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/11 17:14:29 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ Cat::Cat(void) {
 	
 	std::cout << "Cat Default constructor called." << std::endl;
 	this->setType("Cat");
-	ideas[0] = "";
-	ideas[1] = "";
+	for (int i = 0; i < 100; i ++) {
+		ideas[i] = "Cat Idea " + std::to_string(i);
+	}
 	this->_brain = new Brain(ideas);
 }
 
@@ -29,8 +30,9 @@ Cat::Cat(std::string const type) {
 	
 	std::cout << "Cat Type constructor called." << std::endl;
 	this->setType(type);
-	ideas[0] = "";
-	ideas[1] = "";
+	for (int i = 0; i < 100; i ++) {
+		ideas[i] = "Cat Idea " + std::to_string(i);
+	}
 	this->_brain = new Brain(ideas);
 }
 

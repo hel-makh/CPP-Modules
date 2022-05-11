@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:39:02 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/11 11:03:55 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/11 17:14:35 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ Dog::Dog(void) {
 	
 	std::cout << "Dog Default constructor called." << std::endl;
 	this->setType("Dog");
-	ideas[0] = "";
-	ideas[1] = "";
+	for (int i = 0; i < 100; i ++) {
+		ideas[i] = "Dog Idea " + std::to_string(i);
+	}
 	this->_brain = new Brain(ideas);
 }
 
@@ -29,8 +30,9 @@ Dog::Dog(std::string const type) {
 	
 	std::cout << "Dog Type constructor called." << std::endl;
 	this->setType(type);
-	ideas[0] = "";
-	ideas[1] = "";
+	for (int i = 0; i < 100; i ++) {
+		ideas[i] = "Dog Idea " + std::to_string(i);
+	}
 	this->_brain = new Brain(ideas);
 }
 

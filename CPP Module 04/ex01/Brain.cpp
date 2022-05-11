@@ -20,7 +20,7 @@ Brain::Brain(void) {
 }
 
 Brain::Brain(std::string const ideas[100]) {
-	std::cout << "Brain Type constructor called." << std::endl;
+	std::cout << "Brain Ideas constructor called." << std::endl;
 	this->setIdeas(ideas);
 	return ;
 }

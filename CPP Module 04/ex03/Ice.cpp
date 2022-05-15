@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:01:26 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/14 13:42:43 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/15 14:40:17 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Ice::Ice(Ice const & rhs) {
 /****************************[ Operators overload ]****************************/
 
 Ice &	Ice::operator=(Ice const & rhs) {
-	this->setType(rhs.getType());
+	(void) rhs;
 	return (*this);
 }
 

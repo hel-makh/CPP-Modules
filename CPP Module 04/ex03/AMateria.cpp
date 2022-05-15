@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 12:51:56 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/14 16:27:32 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/15 14:40:12 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ AMateria::AMateria(AMateria const & rhs) {
 /****************************[ Operators overload ]****************************/
 
 AMateria &	AMateria::operator=(AMateria const & rhs) {
-	this->setType(rhs.getType());
+	(void) rhs;
 	return (*this);
 }
 

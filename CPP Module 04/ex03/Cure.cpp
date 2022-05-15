@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:41:59 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/14 13:42:46 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/15 14:40:19 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Cure::Cure(Cure const & rhs) {
 /****************************[ Operators overload ]****************************/
 
 Cure &	Cure::operator=(Cure const & rhs) {
-	this->setType(rhs.getType());
+	(void) rhs;
 	return (*this);
 }
 

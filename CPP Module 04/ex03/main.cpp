@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 11:11:12 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/15 13:07:55 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/15 14:40:53 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ int	main(void) {
 	
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
+
+	AMateria *	mat = new Ice();
+	AMateria *	mat2 = new Cure();
+	*mat = *mat2;
 
 	ICharacter *	me = new Character("me");
 	

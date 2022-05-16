@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:36:15 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 16:20:44 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/16 19:19:13 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Bureaucrat {
 		};
 	
 	public:
-		Bureaucrat(std::string const name, int grade);
+		Bureaucrat(std::string const name, int grade = 0);
 		Bureaucrat(Bureaucrat const & rhs);
 		~Bureaucrat(void) {}
 

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:01:10 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/15 15:21:44 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/16 17:48:55 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,6 @@ std::string	DiamondTrap::getName(void) const {
 void	DiamondTrap::setName(std::string name) {
 	this->_name = name;
 	this->ClapTrap::setName(name + "_clap_name");
-}
-
-void	DiamondTrap::attack(const std::string & target) {
-	ScavTrap::attack(target);
 }
 
 void	DiamondTrap::whoAmI(void) {

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:53:18 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 19:15:24 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:49:42 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,7 @@ int	Form::toExec(void) const {
 }
 
 void	Form::beSigned(Bureaucrat const & b) {
-	try {
-		if (b.getGrade() > this->toSign())
-			throw GradeTooLowException();
-		this->_signed = true;
-	} catch (std::exception & e) {
-		std::cout << e.what();
-	}
+	if (b.getGrade() > this->toSign())
+		throw GradeTooLowException();
+	this->_signed = true;
 }

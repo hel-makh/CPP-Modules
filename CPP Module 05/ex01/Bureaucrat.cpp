@@ -6,11 +6,12 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:44:48 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 19:00:27 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:06:59 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+# include "Form.hpp"
 
 /*************************[ Constructors/Destructors ]*************************/
 
@@ -75,9 +76,11 @@ void	Bureaucrat::decrementGrade(int amount) {
 	}
 }
 
-// void	Bureaucrat::signForm(Form const & f) {
-// 	if (f.isSigned())
-// 		std::cout << this->getName() << " signed " << f.getName() << std::endl;
-// 	else
-// 		std::cout << this->getName() << " couldn't sign " << f.getName() << std::endl;
-// }
+void	Bureaucrat::signForm(Form & f) {
+	try {
+		f.beSigned(*this);
+		std::cout << this->getName() << " signed " << f.getName() << std::endl;
+	} catch (std::exception & e) {
+		std::cout << this->getName() << " couldn't sign " << f.getName() << ", " << e.what() << std::endl;
+	}
+}

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:36:15 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 19:19:39 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:07:25 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@
 # include <string>
 # include <exception>
 
-// # include "Form.hpp"
-
 # define HIGHEST_GRADE	0
 # define LOWEST_GRADE	150
 
-// class Form;
+class Form;
 
 class Bureaucrat {
 	private:
@@ -53,7 +51,7 @@ class Bureaucrat {
 
 		void	incrementGrade(int amount);
 		void	decrementGrade(int amount);
-		// void	signForm(Form const & f);
+		void	signForm(Form & f);
 };
 
 std::ostream &  operator<<(std::ostream & o, Bureaucrat const & rhs);

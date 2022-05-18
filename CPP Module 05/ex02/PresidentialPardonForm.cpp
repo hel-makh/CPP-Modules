@@ -71,5 +71,5 @@ int	PresidentialPardonForm::toExec(void) const {
 }
 
 void	PresidentialPardonForm::execution(void) const {
-	std::cout << this->getName() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

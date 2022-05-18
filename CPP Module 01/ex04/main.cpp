@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 21:47:53 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/10 13:48:16 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/18 18:29:59 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int	main(int argc, char **argv) {
 		if (!in_file.eof())
 			out_file << std::endl;
 	}
+	
+	in_file.close();
+	out_file.close();
 	
 	return (EXIT_SUCCESS);
 }

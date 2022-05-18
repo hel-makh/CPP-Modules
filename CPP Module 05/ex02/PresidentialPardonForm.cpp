@@ -15,8 +15,9 @@
 /*************************[ Constructors/Destructors ]*************************/
 
 PresidentialPardonForm::PresidentialPardonForm(
-	std::string const name
-	) :	_name(name),
+	std::string const target
+	) :	_name("Presidential Pardon"),
+		_target(target),
 		_to_sign(25),
 		_to_exec(5) {
 	return ;
@@ -25,6 +26,7 @@ PresidentialPardonForm::PresidentialPardonForm(
 PresidentialPardonForm::PresidentialPardonForm(
 	PresidentialPardonForm const & rhs
 	) :	_name(rhs.getName()),
+		_target(rhs.getTarget()),
 		_to_sign(rhs.toSign()),
 		_to_exec(rhs.toExec()) {
 	return ;
@@ -54,6 +56,10 @@ std::ostream &	operator<<(std::ostream & o, PresidentialPardonForm const & rhs) 
 
 std::string const &	PresidentialPardonForm::getName(void) const {
 	return (this->_name);
+}
+
+std::string const &	PresidentialPardonForm::getTarget(void) const {
+	return (this->_target);
 }
 
 int	PresidentialPardonForm::toSign(void) const {

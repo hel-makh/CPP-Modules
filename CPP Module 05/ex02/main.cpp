@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 15:13:45 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/17 17:13:28 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/18 11:02:04 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 int	main(void) {
 	Bureaucrat				b("Bureaucrat", 30);
-	ShrubberyCreationForm	sF("Shrubbery Form");
-	RobotomyRequestForm		rF("Robotomy Form");
-	PresidentialPardonForm	pF("Pardon Form");
+	ShrubberyCreationForm	sF("Home");
+	RobotomyRequestForm		rF("Robot");
+	PresidentialPardonForm	pF("President");
 
 	std::cout << b << std::endl;
 	std::cout << sF;

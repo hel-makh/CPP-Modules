@@ -15,8 +15,9 @@
 /*************************[ Constructors/Destructors ]*************************/
 
 RobotomyRequestForm::RobotomyRequestForm(
-	std::string const name
-	) :	_name(name),
+	std::string const target
+	) :	_name("Robotomy Request"),
+		_target(target),
 		_to_sign(72),
 		_to_exec(45) {
 	return ;
@@ -25,6 +26,7 @@ RobotomyRequestForm::RobotomyRequestForm(
 RobotomyRequestForm::RobotomyRequestForm(
 	RobotomyRequestForm const & rhs
 	) :	_name(rhs.getName()),
+		_target(rhs.getTarget()),
 		_to_sign(rhs.toSign()),
 		_to_exec(rhs.toExec()) {
 	return ;
@@ -54,6 +56,10 @@ std::ostream &	operator<<(std::ostream & o, RobotomyRequestForm const & rhs) {
 
 std::string const &	RobotomyRequestForm::getName(void) const {
 	return (this->_name);
+}
+
+std::string const &	RobotomyRequestForm::getTarget(void) const {
+	return (this->_target);
 }
 
 int	RobotomyRequestForm::toSign(void) const {

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:53:18 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/18 10:59:45 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/19 13:32:37 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,19 @@ void	ShrubberyCreationForm::execution(void) const {
 	file.open(this->getTarget() + "_shrubbery");
 	if (!file.is_open())
 		std::cerr << "Error: Couldn't open <" << this->getTarget() << "_shrubbery> file." << std::endl;
+	
+	int	treeHeight = 50;
+	for (int i = 0; i < treeHeight; i ++) {
+		std::string	str = "";
+		for (int j = 0; j < i; j ++) {
+			str += "#";
+		}
+		file << std::setw(treeHeight) << str;
+		file << "#" << str << std::endl;
+	}
+	for (int i = 0; i < 5; i ++) {
+		file << std::setw(treeHeight) << "###" << std::endl;
+	}
+
 	file.close();
 }

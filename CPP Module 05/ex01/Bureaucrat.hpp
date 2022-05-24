@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:36:15 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/17 13:07:25 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/23 15:20:42 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include <exception>
 
-# define HIGHEST_GRADE	0
+# define HIGHEST_GRADE	1
 # define LOWEST_GRADE	150
 
 class Form;
@@ -40,7 +40,7 @@ class Bureaucrat {
 		};
 	
 	public:
-		Bureaucrat(std::string const name, int grade = 0);
+		Bureaucrat(std::string const name, int grade = 1);
 		Bureaucrat(Bureaucrat const & rhs);
 		~Bureaucrat(void) {}
 

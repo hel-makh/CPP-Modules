@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:36:15 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 19:19:13 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:47:06 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include <exception>
 
-# define HIGHEST_GRADE	0
+# define HIGHEST_GRADE	1
 # define LOWEST_GRADE	150
 
 class Bureaucrat {
@@ -38,7 +38,7 @@ class Bureaucrat {
 		};
 	
 	public:
-		Bureaucrat(std::string const name, int grade = 0);
+		Bureaucrat(std::string const name, int grade = 1);
 		Bureaucrat(Bureaucrat const & rhs);
 		~Bureaucrat(void) {}
 

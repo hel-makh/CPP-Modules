@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:20:04 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/17 18:45:11 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:47:39 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # include "Bureaucrat.hpp"
 
-# define HIGHEST_GRADE	0
+# define HIGHEST_GRADE	1
 # define LOWEST_GRADE	150
 
 class Form {
@@ -52,7 +52,7 @@ class Form {
 	
 	public:
 		Form(void);
-		Form(std::string const name, int to_sign = 0, int to_exec = 0);
+		Form(std::string const name, int to_sign = 1, int to_exec = 1);
 		Form(Form const & rhs);
 		virtual	~Form(void) {}
 		

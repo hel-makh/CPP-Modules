@@ -6,11 +6,11 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 18:14:25 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/28 19:20:00 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:24:31 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Array.cpp"
+#include "Array.tpp"
 
 class Test {
 	private:

@@ -6,11 +6,12 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 18:14:25 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/28 19:24:31 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/29 14:59:12 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Array.tpp"
+#include <iostream>
+#include "Array.hpp"
 
 class Test {
 	private:
@@ -44,7 +45,6 @@ std::ostream &	operator<<(std::ostream & o, Test const & test) {
 }
 
 int	main(void) {
-	Test		test;
 	Array<Test>	arr(5);
 	
 	std::cout << "size: " << arr.size() << std::endl;
@@ -55,7 +55,7 @@ int	main(void) {
 	} catch (std::exception & e) {
 		std::cout << e.what() << std::endl;
 	}
-
+	
 	Array<Test>	arr2(arr);
 	
 	std::cout << "size: " << arr2.size() << std::endl;

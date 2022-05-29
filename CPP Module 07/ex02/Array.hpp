@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Array.tpp                                          :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 17:29:24 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/28 19:24:11 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/29 14:58:42 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <iostream>
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
+
 # include <stdexcept>
 
 template <typename T>
@@ -20,6 +22,13 @@ class Array {
 		unsigned int	_size;
 	
 	public:
+		class outOfBounds : public std::exception {
+			public:
+				const char * what(void) const throw() {
+					return ("out of bounds");
+				}
+		};
+
 		Array(void) : _size(0) {
 			this->_arr = nullptr;
 		}
@@ -54,10 +63,12 @@ class Array {
 		T &			operator[](unsigned int index) const {
 			if (index >= 0 && index < this->size())
 				return (this->_arr[index]);
-			throw std::out_of_range("out of bounds.");
+			throw outOfBounds();
 		}
 
 		unsigned int	size(void) const {
 			return (this->_size);
 		}
 };
+
+#endif

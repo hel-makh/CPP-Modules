@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 16:55:46 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/28 17:05:43 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/29 14:29:49 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ITER_HPP
 
 template <typename T>
-void	funcIter(T * arr, int size, void (&func)(T&)) {
+void	iter(T * arr, int size, void (&func)(T const &)) {
 	for (int i = 0; i < size; i ++) {
 		func(arr[i]);
 	}

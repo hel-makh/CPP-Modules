@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 11:03:56 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/30 18:26:25 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/31 10:21:44 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(void) {
 		}
 		std::cout << std::endl;
 
+		std::cout << "sp size: " << sp.getSize() << std::endl;
 		std::cout << "sp shortestSpan: " << sp.shortestSpan() << std::endl;
 		std::cout << "sp longestSpan: " << sp.longestSpan() << std::endl << std::endl;
 	} catch (std::exception & e) {
@@ -44,7 +45,6 @@ int	main(void) {
 		sp2.bulkAdd(vec.begin(), vec.end());
 
 		std::cout << "sp2 size: " << sp2.getSize() << std::endl;
-
 		std::cout << "sp2 shortestSpan: " << sp2.shortestSpan() << std::endl;
 		std::cout << "sp2 longestSpan: " << sp2.longestSpan() << std::endl;
 	} catch (std::exception & e) {

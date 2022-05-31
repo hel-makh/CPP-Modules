@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:37:59 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/30 18:05:20 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/31 10:21:10 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,17 @@ class Span {
 		int		shortestSpan(void) const;
 		int		longestSpan(void) const;
 
-		void	bulkAdd(std::vector<int>::iterator begin,
-						std::vector<int>::iterator end);
+		template <typename T>
+		void	bulkAdd(T begin, T end) {
+			std::size_t	size;
+
+			size = std::distance(begin, end);
+			if (size > this->getSize() - this->_vec.size())
+				throw CannotBulkAddNumber();
+			for (T it = begin; it != end; it ++) {
+				this->addNumber(*it);
+			}
+		}
 };
 
 #endif

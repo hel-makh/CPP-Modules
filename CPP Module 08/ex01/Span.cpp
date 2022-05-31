@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:42:36 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/30 18:20:21 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/05/31 10:22:01 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,4 @@ int	Span::longestSpan(void) const {
 	int	min = *std::min_element(this->_vec.begin(), this->_vec.end());
 	int	max = *std::max_element(this->_vec.begin(), this->_vec.end());
 	return (max - min);
-}
-
-void	Span::bulkAdd(std::vector<int>::iterator begin,
-						std::vector<int>::iterator end) {
-	std::size_t	size;
-
-	size = std::distance(begin, end);
-	if (size > this->getSize() - this->_vec.size())
-		throw CannotBulkAddNumber();
-	while (begin != end) {
-		this->addNumber(*begin);
-		begin ++;
-	}
 }

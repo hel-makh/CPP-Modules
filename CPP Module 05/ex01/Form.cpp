@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:53:18 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/17 12:49:42 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:24:34 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,10 @@ Form::Form(
 		_signed(false),
 		_to_sign(to_sign),
 		_to_exec(to_exec) {
-	try {
-		if (to_sign < HIGHEST_GRADE || to_exec < HIGHEST_GRADE)
-			throw GradeTooHighException();
-		else if (to_sign > LOWEST_GRADE || to_exec > LOWEST_GRADE)
-			throw GradeTooLowException();
-	} catch(std::exception & e) {
-		std::cout << this->getName() << ", " << e.what() << std::endl;
-	}
+	if (to_sign < HIGHEST_GRADE || to_exec < HIGHEST_GRADE)
+		throw GradeTooHighException();
+	else if (to_sign > LOWEST_GRADE || to_exec > LOWEST_GRADE)
+		throw GradeTooLowException();
 }
 
 Form::Form(Form const & rhs) :	_name(rhs.getName()),

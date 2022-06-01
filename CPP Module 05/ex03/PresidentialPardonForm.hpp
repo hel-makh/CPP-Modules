@@ -20,10 +20,7 @@
 
 class PresidentialPardonForm : public Form {
 	private:
-		std::string const	_name;
 		std::string const	_target;
-		int const			_to_sign;
-		int const			_to_exec;
 
 		void	execution(void) const;
 	
@@ -34,10 +31,7 @@ class PresidentialPardonForm : public Form {
 
 		PresidentialPardonForm &	operator=(PresidentialPardonForm const & rhs);
 		
-		std::string const &	getName(void) const;
 		std::string const &	getTarget(void) const;
-		int					toSign(void) const;
-		int					toExec(void) const;
 };
 
 std::ostream &  operator<<(std::ostream & o, PresidentialPardonForm const & rhs);

@@ -16,19 +16,15 @@
 
 RobotomyRequestForm::RobotomyRequestForm(
 	std::string const target
-	) :	_name("Robotomy Request"),
-		_target(target),
-		_to_sign(72),
-		_to_exec(45) {
+	) :	Form("Robotomy Request", 72, 45),
+		_target(target) {
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(
 	RobotomyRequestForm const & rhs
-	) :	_name(rhs.getName()),
-		_target(rhs.getTarget()),
-		_to_sign(rhs.toSign()),
-		_to_exec(rhs.toExec()) {
+	) :	Form(rhs.getName(), rhs.toSign(), rhs.toExec()),
+		_target(rhs.getTarget()) {
 	return ;
 }
 
@@ -54,20 +50,8 @@ std::ostream &	operator<<(std::ostream & o, RobotomyRequestForm const & rhs) {
 
 /*****************************[ Member Functions ]*****************************/
 
-std::string const &	RobotomyRequestForm::getName(void) const {
-	return (this->_name);
-}
-
 std::string const &	RobotomyRequestForm::getTarget(void) const {
 	return (this->_target);
-}
-
-int	RobotomyRequestForm::toSign(void) const {
-	return (this->_to_sign);
-}
-
-int	RobotomyRequestForm::toExec(void) const {
-	return (this->_to_exec);
 }
 
 void	RobotomyRequestForm::execution(void) const {

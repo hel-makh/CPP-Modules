@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:20:04 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/18 18:41:43 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:10:35 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@
 
 class ShrubberyCreationForm : public Form {
 	private:
-		std::string const	_name;
 		std::string const	_target;
-		int const			_to_sign;
-		int const			_to_exec;
 
 		void	execution(void) const;
 	
@@ -36,10 +33,7 @@ class ShrubberyCreationForm : public Form {
 
 		ShrubberyCreationForm &	operator=(ShrubberyCreationForm const & rhs);
 		
-		std::string const &	getName(void) const;
 		std::string const &	getTarget(void) const;
-		int					toSign(void) const;
-		int					toExec(void) const;
 };
 
 std::ostream &  operator<<(std::ostream & o, ShrubberyCreationForm const & rhs);

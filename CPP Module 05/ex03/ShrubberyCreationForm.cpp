@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:53:18 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/19 13:32:37 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:10:32 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,15 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm(
 	std::string const target
-	) :	_name("Shrubbery Creation"),
-		_target(target),
-		_to_sign(145),
-		_to_exec(137) {
+	) :	Form("Shrubbery Creation", 145, 137),
+		_target(target) {
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(
 	ShrubberyCreationForm const & rhs
-	) :	_name(rhs.getName()),
-		_target(rhs.getTarget()),
-		_to_sign(rhs.toSign()),
-		_to_exec(rhs.toExec()) {
+	) :	Form(rhs.getName(), rhs.toSign(), rhs.toExec()),
+		_target(rhs.getTarget()) {
 	return ;
 }
 
@@ -55,20 +51,8 @@ std::ostream &	operator<<(std::ostream & o, ShrubberyCreationForm const & rhs) {
 
 /*****************************[ Member Functions ]*****************************/
 
-std::string const &	ShrubberyCreationForm::getName(void) const {
-	return (this->_name);
-}
-
 std::string const &	ShrubberyCreationForm::getTarget(void) const {
 	return (this->_target);
-}
-
-int	ShrubberyCreationForm::toSign(void) const {
-	return (this->_to_sign);
-}
-
-int	ShrubberyCreationForm::toExec(void) const {
-	return (this->_to_exec);
 }
 
 void	ShrubberyCreationForm::execution(void) const {

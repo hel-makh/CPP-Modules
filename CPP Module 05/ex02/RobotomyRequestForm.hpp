@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:20:04 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/18 10:59:35 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:10:39 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@
 
 class RobotomyRequestForm : public Form {
 	private:
-		std::string const	_name;
 		std::string const	_target;
-		int const			_to_sign;
-		int const			_to_exec;
 
 		void	execution(void) const;
 	
@@ -36,10 +33,7 @@ class RobotomyRequestForm : public Form {
 
 		RobotomyRequestForm &	operator=(RobotomyRequestForm const & rhs);
 		
-		std::string const &	getName(void) const;
 		std::string const &	getTarget(void) const;
-		int					toSign(void) const;
-		int					toExec(void) const;
 };
 
 std::ostream &  operator<<(std::ostream & o, RobotomyRequestForm const & rhs);

@@ -16,19 +16,15 @@
 
 PresidentialPardonForm::PresidentialPardonForm(
 	std::string const target
-	) :	_name("Presidential Pardon"),
-		_target(target),
-		_to_sign(25),
-		_to_exec(5) {
+	) :	Form("Presidential Pardon", 25, 5),
+		_target(target) {
 	return ;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(
 	PresidentialPardonForm const & rhs
-	) :	_name(rhs.getName()),
-		_target(rhs.getTarget()),
-		_to_sign(rhs.toSign()),
-		_to_exec(rhs.toExec()) {
+	) :	Form(rhs.getName(), rhs.toSign(), rhs.toExec()),
+		_target(rhs.getTarget()) {
 	return ;
 }
 
@@ -54,20 +50,8 @@ std::ostream &	operator<<(std::ostream & o, PresidentialPardonForm const & rhs) 
 
 /*****************************[ Member Functions ]*****************************/
 
-std::string const &	PresidentialPardonForm::getName(void) const {
-	return (this->_name);
-}
-
 std::string const &	PresidentialPardonForm::getTarget(void) const {
 	return (this->_target);
-}
-
-int	PresidentialPardonForm::toSign(void) const {
-	return (this->_to_sign);
-}
-
-int	PresidentialPardonForm::toExec(void) const {
-	return (this->_to_exec);
 }
 
 void	PresidentialPardonForm::execution(void) const {

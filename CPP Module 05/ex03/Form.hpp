@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:20:04 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/24 14:47:39 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:16:59 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ class Form {
 		Form(Form const & rhs);
 		virtual	~Form(void) {}
 		
-		virtual std::string const &	getName(void) const = 0;
-		bool						isSigned(void) const;
-		virtual int					toSign(void) const = 0;
-		virtual int					toExec(void) const = 0;
+		std::string const &	getName(void) const;
+		bool				isSigned(void) const;
+		int					toSign(void) const;
+		int					toExec(void) const;
 
 		void	beSigned(Bureaucrat const & b);
 		void	execute(Bureaucrat const & executor) const;

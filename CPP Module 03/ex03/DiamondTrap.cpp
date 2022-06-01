@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:01:10 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 17:48:55 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 15:24:16 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 
 DiamondTrap::DiamondTrap(void) {
 	std::cout << "DiamondTrap Default constructor called." << std::endl;
-	this->setHitPoints(this->FragTrap::getHitPoints());
-	this->setEnergyPoints(this->ScavTrap::getEnergyPoints());
-	this->setAttackDamage(this->FragTrap::getAttackDamage());
+	this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackDamage(30);
 	return ;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : _name(name) {
 	std::cout << "DiamondTrap Name constructor called." << std::endl;
 	this->ClapTrap::setName(name + "_clap_name");
-	this->setHitPoints(this->FragTrap::getHitPoints());
-	this->setEnergyPoints(this->ScavTrap::getEnergyPoints());
-	this->setAttackDamage(this->FragTrap::getAttackDamage());
+	this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackDamage(30);
 	return ;
 }
 

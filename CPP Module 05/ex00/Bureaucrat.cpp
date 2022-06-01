@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:44:48 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/05/16 15:34:40 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:23:47 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,10 @@
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) :	_name(name),
 															_grade(grade) {
-	try {
-		if (grade < HIGHEST_GRADE)
-			throw GradeTooHighException();
-		else if (grade > LOWEST_GRADE)
-			throw GradeTooLowException();
-	} catch(std::exception & e) {
-		std::cout << this->getName() << ", " << e.what() << std::endl;
-	}
+	if (grade < HIGHEST_GRADE)
+		throw GradeTooHighException();
+	else if (grade > LOWEST_GRADE)
+		throw GradeTooLowException();
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & rhs) {
@@ -56,21 +52,13 @@ int	Bureaucrat::getGrade(void) const {
 }
 
 void	Bureaucrat::incrementGrade(int amount) {
-	try {
-		if (this->getGrade() - amount < HIGHEST_GRADE)
-			throw GradeTooHighException();
-		this->_grade -= amount;
-	} catch(std::exception & e) {
-		std::cout << e.what() << std::endl;
-	}
+	if (this->getGrade() - amount < HIGHEST_GRADE)
+		throw GradeTooHighException();
+	this->_grade -= amount;
 }
 
 void	Bureaucrat::decrementGrade(int amount) {
-	try {
-		if (this->getGrade() + amount > LOWEST_GRADE)
-			throw GradeTooLowException();
-		this->_grade += amount;
-	} catch(std::exception & e) {
-		std::cout << e.what() << std::endl;
-	}
+	if (this->getGrade() + amount > LOWEST_GRADE)
+		throw GradeTooLowException();
+	this->_grade += amount;
 }

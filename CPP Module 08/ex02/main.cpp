@@ -6,13 +6,11 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 18:56:03 by hel-makh          #+#    #+#             */
-/*   Updated: 2022/06/01 13:49:08 by hel-makh         ###   ########.fr       */
+/*   Updated: 2022/06/01 13:53:04 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <vector>
-
 #include "MutantStack.hpp"
 
 int main()

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:12:07 by hel-makh          #+#    #+#             */
-/*   Updated: 2023/03/14 22:13:59 by hel-makh         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:03:24 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,14 +196,13 @@ void	BitcoinExchange::printValues(const char * input) {
 			continue ;
 		}
 
-		std::multimap<int, float>::iterator it = this->database.lower_bound(timestamp);
-		if (it != this->database.end()) {
-			if (it->first != timestamp) {
-				--it;
-			}
-			float	exchange_rate = it->second;
-			std::cout << date << " => " << value << " = " << value * exchange_rate << std::endl;
+		std::map<int, float>::iterator it = this->database.lower_bound(timestamp);
+		if(it == this->database.end()) {
+			--it;
 		}
+		
+		float	exchange_rate = it->second;
+		std::cout << date << " => " << value << " = " << value * exchange_rate << std::endl;
 	}
 
 	in_file.close();

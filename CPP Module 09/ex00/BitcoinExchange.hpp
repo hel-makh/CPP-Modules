@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 14:42:57 by hel-makh          #+#    #+#             */
-/*   Updated: 2023/03/14 22:13:56 by hel-makh         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:05:17 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 
 class BitcoinExchange {
 	private:
-		std::multimap<int, float>	database;
+		std::map< int, float, std::greater<int> >	database;
 
 	public:
 		BitcoinExchange(const char * database);
 		BitcoinExchange(BitcoinExchange const & rhs);
-		~BitcoinExchange() {}
+		~BitcoinExchange(void) {}
 
 		BitcoinExchange &	operator=(BitcoinExchange const & rhs);
 

@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:12:07 by hel-makh          #+#    #+#             */
-/*   Updated: 2023/03/15 15:03:24 by hel-makh         ###   ########.fr       */
+/*   Updated: 2023/03/17 21:29:20 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,8 @@ BitcoinExchange::BitcoinExchange(const char * database) {
 	}
 
 	std::string	line;
+	std::getline(db_file, line);
 	while (std::getline(db_file, line)) {
-		if (line == "date,exchange_rate")
-			continue ;
-		
 		size_t comma = line.find(",");
   		if (comma == std::string::npos) {
 			throw std::runtime_error(std::string("Error: bad input in database => ") + line);
@@ -146,10 +144,8 @@ void	BitcoinExchange::printValues(const char * input) {
 	}
 
 	std::string	line;
+	std::getline(in_file, line);
 	while (std::getline(in_file, line)) {
-		if (line == "date | value")
-			continue ;
-
 		size_t sep = line.find(" | ");
   		if (sep == std::string::npos) {
 			std::cerr << "Error: bad input => " << line << std::endl;
@@ -163,11 +159,11 @@ void	BitcoinExchange::printValues(const char * input) {
 
 		if (!isValidDateFormat(date)) {
 			std::cerr << "Error: invalid date format => " << line << std::endl;
+			continue ;
 		}
 		
 		std::replace(date.begin(), date.end(), '-', ' ');
 		std::istringstream(date) >> year >> month >> day;
-		std::replace(date.begin(), date.end(), ' ', '-');
 
 		if (!isValidDate(year, month, day)) {
 			std::cerr << "Error: invalid date => " << line << std::endl;
@@ -198,11 +194,16 @@ void	BitcoinExchange::printValues(const char * input) {
 
 		std::map<int, float>::iterator it = this->database.lower_bound(timestamp);
 		if(it == this->database.end()) {
-			--it;
+			std::cerr << "Error: date not in database => " << line << std::endl;
+			continue ;
 		}
 		
 		float	exchange_rate = it->second;
-		std::cout << date << " => " << value << " = " << value * exchange_rate << std::endl;
+		std::cout << year << "-"
+			<< std::setfill('0') << std::setw(2) << month << "-"
+			<< std::setfill('0') << std::setw(2) << day
+			<< " => " << value
+			<< " = " << value * exchange_rate << std::endl;
 	}
 
 	in_file.close();

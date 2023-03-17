@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 23:01:27 by hel-makh          #+#    #+#             */
-/*   Updated: 2023/03/17 17:26:28 by hel-makh         ###   ########.fr       */
+/*   Updated: 2023/03/17 21:10:32 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ int	RPN(const char * expression) {
 					op = operands.top() - op;
 				}
 				else if (*it == '/') {
+					if (op == 0) {
+						throw std::runtime_error("Error");
+					}
 					op = operands.top() / op;
 				}
 				else if (*it == '*') {

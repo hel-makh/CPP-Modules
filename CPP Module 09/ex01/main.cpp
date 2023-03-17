@@ -6,7 +6,7 @@
 /*   By: hel-makh <hel-makh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 23:12:21 by hel-makh          #+#    #+#             */
-/*   Updated: 2023/03/14 23:30:24 by hel-makh         ###   ########.fr       */
+/*   Updated: 2023/03/17 17:23:01 by hel-makh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv) {
 		std::cout << RPN(argv[1]) << std::endl;
 
 	} catch (std::exception & e) {
-		std::cerr << "Error" << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	return (EXIT_SUCCESS);

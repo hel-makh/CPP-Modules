@@ -206,7 +206,7 @@ void	PmergeMe(char **numbers, int size) {
 
 	printVector(vec, "After");
 	
-	elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+	elapsed_secs = (double(end - begin) / CLOCKS_PER_SEC) * 1000000;
 	std::cout << "Time to process a range of " << vec.size() << " elements with std::vector :\t" << std::fixed << elapsed_secs << " us" << std::endl;
 
 	begin = clock();
@@ -214,6 +214,6 @@ void	PmergeMe(char **numbers, int size) {
 	listSort(lst, 0, lst.size() - 1);
 	end = clock();
 
-	elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+	elapsed_secs = (double(end - begin) / CLOCKS_PER_SEC) * 1000000;
 	std::cout << "Time to process a range of " << vec.size() << " elements with std::list   :\t" << std::fixed << elapsed_secs << " us" << std::endl;
 }
